@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var color = [];
+var count = color.push("red","black");
+alert(count);
+//    push方法把它们逐个添加到数组的尾部，并返回修改后的数组的长度
+var item = color.shift();
+alert(item);
+    //先进先出
+//    在数组的后端添加项，从前端移除
+</script>
+<script>
+    var color = [];
+    var count = color.unshift("red","black");
+    //unshift能在数组的前端推进两个项
+    alert(count);
+    //    push方法把它们逐个添加到数组的尾部，并返回修改后的数组的长度
+    var item = color.pop();
+    alert(item);
+    //先进先出
+    //    在数组的前端添加项，从后端移除
+</script>
+
+
+
+</body>
+</html>

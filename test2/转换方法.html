@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var person1={
+       toString :function () {
+            return "A";
+    },
+        toLocaleString: function()  {
+        return  "B";
+
+    }
+    };
+
+
+    var person2={
+        toString: function() {
+        return  "C";
+    },
+    toLocaleString:function () {
+        return  "D";
+    }
+    };
+
+
+    var person = [person1,person2];
+    alert(person);
+    alert(person.join("*"));
+    alert(person.toString());
+    alert(person.toLocaleString());
+    var oo = ["1","2","3","4"];
+
+     oo[99]="10";
+ alert(oo[3].toString());
+//alert(oo[4].toString());
+ alert(oo[4]);
+ alert(oo.toString());//1,2,3,4,,,,,,,,...,,,,,,,,,,10
+//    如果数组中的某一项的值是null或者underfined，那么该值在join()、toLoaleString、、、、方法返回的结果中以空字符喘表示，
+
+</script>
+</body>
+</html>

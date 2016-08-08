@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--对象字面量定义-->
+<script>
+function displayINfo(args) {
+var output = "";
+if(typeof args.name=="string")
+{
+output +="name:"+args.name+"\n";
+}
+if (typeof args.age=="number")
+{
+    output +="Age:"+args.age+"\n";
+}
+alert(output);
+}
+displayINfo({
+   name:"doudou"
+});
+    displayINfo({
+        age:29
+    });
+</script>
+</body>
+</html>
