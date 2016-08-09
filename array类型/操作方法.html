@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var color = ["red","black","blue"];
+    var color1 = color.concat("bb","cc");
+    alert(color);
+    alert(color1.toString());//red,black.blue,bb,cc
+</script>
+<script>
+    var color = ["a","b","c","d","e"];
+    var color1 = color.slice(1);
+    var color2 = color.slice(1,4);
+    alert(color1);
+    alert(color2);
+</script>
+<script>
+    var color = ["a","b","c","d","e"];
+
+    var color2 = color.slice(-2,-1);
+
+    alert(color2);
+//    与slice（3,4）一样
+</script>
+
+<script>
+    var color =["a","b","c","d","e"];
+    var color1 =color.splice(0,1);
+    alert(color1);
+    alert(color);
+//    删除第一项
+
+</script>
+
+<script>
+    var color =["a","b","c","d","e"];
+    var color1 =color.splice(0,0,"red");
+    alert(color1);
+    alert(color);
+    //    插入第一项
+
+</script>
+<script>
+    var color =["a","b","c","d","e"];
+    var color1 =color.splice(0,1,"red","yyy");
+    alert(color1);
+    alert(color);
+    //    替换 并插入
+</script>
+</body>
+</html>

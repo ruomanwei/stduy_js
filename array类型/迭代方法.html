@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a=[1,2,3,10,8,10,2];
+    var c=0;
+    a.forEach(function (item) {
+      return  c=item+c;
+    });
+    alert(c);
+</script>
+<script>
+    var a=[1,2,3,10,8,10,2];
+
+    var b=a.every(function (item) {
+        return  (item>2);
+    });
+    alert(b);
+</script>
+<script>
+    var a=[1,2,3,10,8,10,2];
+
+    var b=a.some(function (item) {
+        return  (item>2);
+    });
+    alert(b);
+</script>
+<script>
+    var a=[1,2,3,10,8,10,2];
+
+    var b=a.filter(function (item) {
+        return  (item>2);
+    });
+    alert(b);
+</script>
+<script>
+    var a=[1,2,3,10,8,10,2];
+
+    var b=a.map(function (item) {
+        return  (item*2);
+    });
+    alert(b);
+</script>
+</body>
+</html>
