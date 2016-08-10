@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var pattern=/[bc]at/i;
+    //匹配第一个bat或者cat，不区分大小写
+    var pattern1=/\[bc\]at/i
+            //匹配第一个[bc]at,不区分大小写
+    //以上为字面量定义
+</script>
+<script>
+    //使用RegExp构造函数，它接收两个参数：一个是要匹配的字符串模式，另一个是可选的标志字符串
+    pattern = new RegExp("[bc]at","i");
+</script>
+<!--在ECMAScript3中，正则表达式字面量始终会共享同一个RegExp实例，而使用构造函数创建的每一个新RegExp实例都是一个新的实例-->
+<script>
+    var re = null;
+
+    for(i=0;i<10;i++){
+        re = /cat/g;
+        re.test("catjhjhjjj");
+    }
+</script>
+</body>
+</html>

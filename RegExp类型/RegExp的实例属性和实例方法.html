@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--RegExp的实例属性-->
+<script>
+var pattern = /\[bc\]at/i;
+    alert(pattern.global);
+    alert(pattern.ignoreCase);
+    alert(pattern.multiline);
+    alert(pattern.lastIndex);
+    alert(pattern.source);
+</script>
+<!--RegExp的实例方法 exec()
+该方法是专门为捕获组而设计的-->
+<script>
+    var text = "mom and dad and baby"
+    var pattern = /mom( and dad ( and baby)?)?/gi;
+    var matches = pattern.exec(text);
+    alert(matches.index);
+    alert(matches.input);
+    alert(matches[0]);
+    alert(matches[1]);
+    alert(matches[2]);
+</script>
+<!--test()-->
+<script>
+    var text = "000-00-0000";
+    var pattern = /\d{3}-\d{2}-\d{3}/;
+    if(pattern.test(text)){
+        alert("写法正确");
+    }
+
+</script>
+<!--tolocaleString() 和 toString() 方法最后输出的都是字面量表示形式-->
+</body>
+</html>
