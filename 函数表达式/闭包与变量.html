@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function box(){
+        var arr=[];
+        for(i=0;i<10;i++){
+            arr[i]=function(){return i;}
+        }
+        return arr;
+    }
+    var a=box();
+    alert(a);//包含五个函数体的数组
+    alert(a[0]());
+    alert(a[1]());
+    alert(a[10]());
+
+</script>
+<script>
+    function box(){
+        var arr=[];
+        for(i=0;i<10;i++){
+            arr[i]=function(num){
+                return function () {
+                return num;
+            }}(i);
+        }
+        return arr;
+    }
+    var a=box();
+    alert(a);//包含五个函数体的数组
+    alert(a[0]());
+    alert(a[1]());
+    alert(a[10]());
+
+</script>
+</body>
+</html>

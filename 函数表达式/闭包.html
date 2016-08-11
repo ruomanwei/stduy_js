@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--闭包时指有权访问另一个函数作用域中的变量和函数-->
+<script>
+a=[{name:"doudou",age:25},{name:"fengfeng",age:24},{name:"jiu",age:1}];
+function compare(propertypename) {
+return function (object1,object2) {
+value1=object1[propertypename];
+value2=object2[propertypename];
+return value1-value2;
+}
+}
+var compare1= compare("name");
+alert(compare1({name:2},{name:1}));
+compare1=null//解除该函数的引用，就等于通知垃圾回收例程将他收回。
+</script>
+
+</body>
+</html>

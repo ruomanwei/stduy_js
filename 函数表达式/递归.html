@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ff(a) {
+        if(a<=1){
+            return 1;
+        }else{
+            return a*arguments.callee(a-1);
+        }
+    }
+    alert(ff(3));
+</script>
+<script>
+    //另一种方法，绝壁神奇啊
+    var ling = (function f(a) {
+        if(a<=1){
+            return 1;
+        }else{
+            return a*arguments.callee(a-1);
+        }
+
+    });
+    alert(ling(3));
+</script>
+</body>
+</html>

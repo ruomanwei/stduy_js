@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+         function sayhi (a)
+        {
+            if(a=="true"){
+                return function () {
+                    return 1;
+                }
+            }
+            if(a=="false")
+            {
+                   return function () {
+                       return 2;
+                   }
+            }
+        }
+        alert(sayhi("true")());
+//        //匿名函数，因为function关键字后面没有标识符，有时也叫拉姆达函数
+</script>
+</body>
+</html>
