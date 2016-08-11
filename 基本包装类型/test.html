@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var s1 = "aaaa";
+    s1.color="red"
+    alert(s1.color);
+</script>
+<!--使用new调用基本包装类型的构造函数，和直接调用同名的转型函数时不一样的-->
+<script>
+    var value = "25";
+    var number = Number(value);
+    alert(typeof number);//返回number
+    var value = "25";
+    var number = new Number(value);
+    alert(typeof number);//返回object
+
+</script>
+</body>
+</html>
