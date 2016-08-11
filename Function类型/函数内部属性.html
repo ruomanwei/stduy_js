@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f(num) {
+        if(num <=1){
+            return 1;
+        }
+        else return num*f(num-1);
+    }
+    alert(f(3));
+</script>
+<!--callee的属性，指向拥有这个arguments对象的函数，防止全局变量的污染-->
+<script>
+function f(num) {
+if(num <=1){
+return 1;
+}
+else return num*arguments.callee(num-1);
+}
+var k =f;
+var f=function (num) {
+    return num;
+}
+alert(f(3));
+
+    alert(k(3));
+</script>
+<!--this属性-->
+<script>
+    <!--this 引用的是函数据以执行的环境对象-->
+</script>
+<!--caller属性-->
+<!--返回函数的调用者-->
+<script>
+    function outer() {
+        inner();
+    }
+    function inner() {
+        alert(inner.caller);
+    }
+    outer();
+</script>
+<script>
+    function outer() {
+        inner();
+    }
+    function inner() {
+        alert(arguments.callee.caller);
+    }
+    outer();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--要是访问的是指针而不是函数的话，必须去掉函数名后面的那对圆括号-->
+<!--按对象数组某个指定的属性值进行排序-->
+<script>
+    a=[{name:"doudou",age:25},{name:"fengfeng",age:24},{name:"jiu",age:1}];
+    function compare(propertypename) {
+        return function (object1,object2) {
+            value1=object1[propertypename];
+            value2=object2[propertypename];
+            return value1-value2;
+        }
+    }
+   a.sort(compare("age"));
+    a.forEach(function (item) {
+        alert(item.name);
+
+    });
+
+</script>
+</body>
+</html>

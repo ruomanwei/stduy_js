@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--每个函数都包含两个属性：length和prototype-->
+<!--每个函数都包含两个非继承方法：apply和call-->
+<!--都可以传参数和扩展作用域-->
+<!--传参-->
+<script>
+    function sum(a,b) {
+        return a+b;
+    }
+    function callsum(a,b) {
+        return sum.apply(this,arguments);
+    }
+    alert(callsum(1,2));
+</script>
+<!--扩展作用域-->
+<script>
+   window.color = "red";
+    var o = {
+      color : "blue"
+    };
+    function saycolor() {
+        alert(this.color);
+    }
+    saycolor();
+    saycolor.call(this);
+    saycolor.call(o);
+</script>
+<!--es5还定义了一个方法：bind（）创建一个函数的实例-->
+<script>
+    window.color = "red";
+    var o = {color:"blue"};
+    function say() {
+        alert(this.color);
+
+    }
+    var object = say().bind(o);
+
+    object();
+</script>
+</body>
+</html>
